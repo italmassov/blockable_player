@@ -12,6 +12,8 @@ node_modules/
 # Build artifacts
 dist/
 build/
+.build/
+BlockablePlayer.app/
 
 # Coverage and test caches
 coverage/
@@ -26,3 +28,10 @@ __pycache__/
 # IDE settings
 .idea/
 .vscode/
+
+# Local pkg-config override
+pkgconfig/libvlc.pc
+
+# materials
+*.png
+homebrew-tap/

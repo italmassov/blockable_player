@@ -55,6 +55,9 @@ install_name_tool -add_rpath "@executable_path/../Frameworks" "${APP_DIR}/Conten
 if [[ -n "${SIGN_IDENTITY:-}" ]]; then
   echo "Codesigning with identity: ${SIGN_IDENTITY}"
   codesign --deep --force --options runtime --sign "${SIGN_IDENTITY}" "${APP_DIR}"
+elif [[ "${SIGN_ADHOC:-0}" == "1" ]]; then
+  echo "Codesigning with ad-hoc identity."
+  codesign --deep --force --sign "-" "${APP_DIR}"
 fi
 
 mkdir -p "${DIST_DIR}"
