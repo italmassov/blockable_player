@@ -1,0 +1,10 @@
+prefix=/Applications/VLC.app/Contents/MacOS
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libvlc
+Description: VLC media player library
+Version: 0.0.0
+Libs: -L${libdir} -lvlc -lvlccore
+Cflags: -I${includedir}

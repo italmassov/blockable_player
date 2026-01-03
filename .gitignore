@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependency directories
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Coverage and test caches
+coverage/
+.pytest_cache/
+
+# Python caches
+__pycache__/
+*.pyc
+.ruff_cache/
+.mypy_cache/
+
+# IDE settings
+.idea/
+.vscode/
